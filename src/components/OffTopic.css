@@ -1,0 +1,52 @@
+.offtopic-container {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.offtopic-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.offtopic-container section {
+  margin-top: 2rem;
+}
+
+.drawings-section p,
+.hobbies-section ul,
+.misc-section ul {
+  font-size: 1rem;
+  color: #334155;
+}
+
+.drawing-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.drawing-gallery img {
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.drawing-gallery img:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: "✨ ";
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,52 @@
+body,
+html,
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /*overflow: hidden;*/
+}
+
+.gate-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+.gate {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  background-color: #1f1f1f8b;
+  z-index: 10;
+}
+
+.gate-left {
+  left: 0;
+  animation: openLeft 2s forwards;
+}
+
+.gate-right {
+  right: 0;
+  animation: openRight 2s forwards;
+}
+
+@keyframes openLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+@keyframes openRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -50%;
+  }
+}
