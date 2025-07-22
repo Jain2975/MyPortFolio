@@ -57,7 +57,7 @@
 
 .contact svg {
   cursor: pointer;
-  transition: transform 0.2s ease, color; 0.2s ease;
+  transition: transform 0.2s ease, color 0.2 ease;
 }
 .contact svg::hover{
   transform: scale(1.2);
