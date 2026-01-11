@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+body,html{
+  margin: 0%;
+  padding: 0%;
+ 
+}
+.glitch {
+  position: relative;
+  color: #00ffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 4500px, 0, 0);
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 magenta;
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 lime;
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+}
+
+
+
+.tech-glitch {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: glitch 1.5s infinite;
+}
+
+.tech-glitch::before,
+.tech-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.tech-glitch::before {
+  left: 1px;
+  text-shadow: -1px 0 magenta;
+  animation: glitchTop 1.5s infinite linear alternate-reverse;
+}
+
+.tech-glitch::after {
+  left: -1px;
+  text-shadow: -1px 0 cyan;
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+}
+/* Left to right marquee */
+@keyframes marquee-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Right to left marquee */
+@keyframes marquee-right {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 30s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 35s linear infinite reverse;
+}
+
+/* Optional glitch flicker */
+.tech-glitch {
+  position: relative;
+}
+.tech-glitch::before,
+.tech-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  color: cyan;
+  clip: rect(0, 900px, 0, 0);
+}
+.tech-glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  color: #0ff;
+}
+.tech-glitch::after {
+  animation: glitchBottom 3s infinite linear alternate-reverse;
+  color: #f0f;
+}
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); transform: translate(0,0); }
+  25% { clip: rect(0, 9999px, 5px, 0); transform: translate(-2px,-2px); }
+  50% { clip: rect(0, 9999px, 0, 0); transform: translate(2px,2px); }
+  75% { clip: rect(0, 9999px, 3px, 0); transform: translate(-1px,1px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: translate(0,0); }
+}
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); transform: translate(0,0); }
+  25% { clip: rect(3px, 9999px, 10px, 0); transform: translate(2px,1px); }
+  50% { clip: rect(0, 9999px, 0, 0); transform: translate(-2px,-1px); }
+  75% { clip: rect(5px, 9999px, 8px, 0); transform: translate(1px,2px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: translate(0,0); }
+}
+@keyframes goAroundCircle {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
+    color: rgba(0, 255, 255, 0.6);
+  }
+  25% {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+    color: rgba(0, 255, 255, 0.8);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.7));
+    color: rgba(255, 0, 255, 0.8);
+  }
+  75% {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.7));
+    color: rgba(0, 255, 255, 0.8);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
+    color: rgba(0, 255, 255, 0.6);
+  }
+}
+
+.circle-path {
+  animation: goAroundCircle 12s linear infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes rocket-fly {
+  0% {
+    transform: translateX(0) translateY(0) rotate(10deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(50vw) translateY(-10vh) rotate(20deg);
+  }
+  100% {
+    transform: translateX(110vw) translateY(-40vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.animate-rocket {
+  animation: rocket-fly 1.5s ease-in-out forwards;
+}
