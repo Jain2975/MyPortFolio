@@ -23,7 +23,7 @@ import {
   SiDocker,
 } from "react-icons/si";
 
-/* ─── Omnitrix Avatar: rises edge-on from below, then slow 3-D spin ─── */
+/* ─ Omnitrix Avatar: rises edge-on from below, then slow 3-D spin ─ */
 function OmnitrixAvatar({ src }) {
   const cardRef = useRef(null);
 
@@ -290,7 +290,7 @@ function OmnitrixAvatar({ src }) {
   );
 }
 
-/* ─── Skill bar ─── */
+/* ─ Skill bar ─ */
 function SkillBar({ label, pct, delay }) {
   return (
     <div style={{ marginBottom: 10 }}>
@@ -330,7 +330,7 @@ function SkillBar({ label, pct, delay }) {
   );
 }
 
-/* ─── Tag pill ─── */
+/* ─ Tag pill ─ */
 function Pill({ children, delay }) {
   return (
     <span
@@ -352,7 +352,7 @@ function Pill({ children, delay }) {
   );
 }
 
-/* ─── Section card ─── */
+/* ─ Section card ─ */
 function InfoCard({ icon, title, children }) {
   return (
     <div
@@ -390,7 +390,7 @@ function InfoCard({ icon, title, children }) {
   );
 }
 
-/* ─── Main Home component ─── */
+/* ─ Main Home component ─ */
 export default function Home() {
   const navigate = useNavigate();
   const handleLaunch = () => navigate("/projects");
@@ -401,7 +401,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-full bg-black text-white flex flex-col md:flex-row">
-      {/* ──────────── LEFT PANEL ──────────── */}
+      {/*  LEFT PANEL  */}
       <div className="md:w-1/3 flex flex-col justify-between border-r border-gray-800 px-6 py-8">
         <div className="flex flex-col items-center mt-10 gap-4">
           <OmnitrixAvatar src={profileImageSrc} />

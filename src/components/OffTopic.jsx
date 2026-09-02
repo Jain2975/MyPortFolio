@@ -7,7 +7,7 @@ const sketches = Array.from({ length: SKETCH_COUNT }, (_, i) => ({
   alt: `Sketch ${i + 1}`,
 }));
 
-/* ── Fan carousel for sketches ── */
+/*  Fan carousel for sketches  */
 function SketchFan() {
   const n = sketches.length;
   const [active, setActive] = useState(0);
@@ -306,7 +306,7 @@ function SketchFan() {
   );
 }
 
-/* ── Main OffTopic page ── */
+/*  Main OffTopic page  */
 export default function OffTopic() {
   const navigate = useNavigate();
 
@@ -402,7 +402,7 @@ export default function OffTopic() {
         />
       </div>
 
-      {/* ── Drawings section with fan carousel ── */}
+      {/*  Drawings section with fan carousel  */}
       <section style={{ marginBottom: 64 }}>
         <h3
           style={{
@@ -441,7 +441,7 @@ export default function OffTopic() {
         }}
       />
 
-      {/* ── Favorite Shows ── */}
+      {/*  Favorite Shows  */}
       <section style={{ maxWidth: 700, margin: "0 auto" }}>
         <h3
           style={{
