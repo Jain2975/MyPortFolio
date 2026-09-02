@@ -1,10 +1,5 @@
-<<<<<<< master
-import './App.css'
-import Home from './components/home'
-=======
 import "./App.css";
 import Home from "./components/Home";
->>>>>>> local
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./components/Projects";
 import OffTopic from "./components/OffTopic";
